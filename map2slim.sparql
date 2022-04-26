@@ -9,5 +9,8 @@ WHERE
 	?term rdfs:subClassOf ?o .
   	?o in_subset: ?_slim_iri .
     ?term ?predicate ?label.
-    VALUES ?term {?term_x}
+}
+VALUES ?term
+{
+    ?term_x
 }
