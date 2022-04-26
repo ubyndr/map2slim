@@ -1,5 +1,6 @@
 #+ endpoint: https://ubergraph.apps.renci.org/sparql
-#+ - slim: http://purl.obolibrary.org/obo/uberon/core#organ_slim
+#+ defaults:
+#+   - slim: http://purl.obolibrary.org/obo/uberon/core#organ_slim
 PREFIX in_subset: <http://www.geneontology.org/formats/oboInOwl#inSubset>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  ?term ?predicate ?object
