@@ -6,8 +6,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  distinct ?term ?label
 WHERE
 {
-	?term rdfs:subClassOf ?o .
+	?_term_iri rdfs:subClassOf ?o .
   	?o in_subset: ?_slim_iri .
-    ?term ?predicate ?label.
+    ?_term_iri ?predicate ?label.
 }
-  VALUES ?term {?_term_iri}
