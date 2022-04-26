@@ -8,5 +8,5 @@ WHERE
 {
 	?_term_iri ?_r_iri ?o .
   	?o in_subset: ?_slim_iri .
-    ?term ?predicate ?object
+    ?term_iri ?predicate ?object
 }
