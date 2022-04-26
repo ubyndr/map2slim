@@ -12,5 +12,5 @@ WHERE
 }
 VALUES ?term
 {
-    ?term_x
+    <http://purl.obolibrary.org/obo/UBERON_0009709>
 }
