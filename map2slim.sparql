@@ -3,11 +3,13 @@
 #+   - slim: http://purl.obolibrary.org/obo/uberon/core#organ_slim
 PREFIX in_subset: <http://www.geneontology.org/formats/oboInOwl#inSubset>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT  distinct ?_term_iri ?_slim_iri ?o ?label
+SELECT  distinct ?term ?slim ?o ?label
 WHERE
 {
 	?_term_iri rdfs:subClassOf ?o .
   	?o in_subset: ?_slim_iri .
     ?_term_iri rdfs:label ?label.
+    bind(?_term_iri as ?term)
+    bind(?_slim_iri as ?slim)
 }
 
