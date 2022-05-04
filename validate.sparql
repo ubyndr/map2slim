@@ -5,9 +5,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  ?subject_iri ?relation_iri ?object_iri ?validated
 WHERE
 {
-  BIND (exists{?_subject_iri ?_relation_iri ?_object_iri} AS ?boolean)
-  BIND (IF(?boolean, "true", "false") AS ?validated)
+  ?_subject_iri ?_relation_iri ?_object_iri .
   BIND (?_subject_iri as ?subject_iri)
   BIND (?_relation_iri as ?relation_iri)
   BIND (?_object_iri as ?object_iri)
+  BIND (exists{?subject_iri ?relation_iri ?object_iri} AS ?boolean)
+  BIND (IF(?boolean, "true", "false") AS ?validated)
+
 }
